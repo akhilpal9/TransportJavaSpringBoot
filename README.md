@@ -1,5 +1,11 @@
 Transport application
 
+Execute below query in db or import sql
+```INSERT INTO roles(name) VALUES('ROLE_USER');
+INSERT INTO roles(name) VALUES('ROLE_MODERATOR');
+INSERT INTO roles(name) VALUES('ROLE_ADMIN');
+```
+
 ```curl --location 'localhost:8080/api/auth/signup' \
 --header 'username: admin' \
 --header 'password: admin' \
@@ -10,10 +16,10 @@ Transport application
 "password": "",
 "email": "test@tets.com",
 "role": ["ADMIN"]
-}'```
-
+}' 
 ```
-curl --location 'localhost:8080/api/auth/signup' \
+
+```curl --location 'localhost:8080/api/auth/signup' \
 --header 'username: admin' \
 --header 'password: admin' \
 --header 'Content-Type: application/json' \
@@ -27,8 +33,7 @@ curl --location 'localhost:8080/api/auth/signup' \
 ```
 
 
-```
-curl --location 'localhost:8080/api/bus/add' \
+```curl --location 'localhost:8080/api/bus/add' \
 --header 'username: admin' \
 --header 'password: admin' \
 --header 'Content-Type: application/json' \
@@ -44,5 +49,7 @@ curl --location 'localhost:8080/api/bus/add' \
 }
 '
 ```
+
+
 
 
